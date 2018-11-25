@@ -1,0 +1,72 @@
+@RULE StrangeLoop
+********************************
+**** COMPILED FROM NUTSHELL ****
+****         v0.4.4         ****
+********************************
+
+
+@TABLE
+neighborhood: Moore
+symmetries: rotate4reflect
+n_states: 3
+
+var any.0 = {0,1,2}
+var any.1 = any.0
+var any.2 = any.0
+var any.3 = any.0
+var any.4 = any.0
+var any.5 = any.0
+var any.6 = any.0
+var any.7 = any.0
+var live.0 = {1,2}
+var live.1 = live.0
+var live.2 = live.0
+var live.3 = live.0
+
+#### symmetries: permute
+# b3s23
+0, any.0, any.1, any.2, live.0, live.1, live.2, any.3, any.4, 1
+0, any.0, live.0, any.1, any.2, any.3, any.4, live.1, live.2, 1
+0, any.0, live.0, any.1, any.2, any.3, live.1, live.2, any.4, 1
+0, live.0, any.0, live.1, live.2, any.1, any.2, any.3, any.4, 1
+0, live.0, any.0, any.1, any.2, live.1, live.2, any.3, any.4, 1
+0, live.0, any.0, live.1, any.1, live.2, any.2, any.3, any.4, 1
+0, live.0, live.1, live.2, any.0, any.1, any.2, any.3, any.4, 1
+0, any.0, live.0, any.1, live.1, any.2, any.3, live.2, any.4, 1
+0, any.0, live.0, any.1, any.2, any.3, live.1, any.4, live.2, 1
+0, any.0, live.0, any.1, any.2, live.1, any.3, live.2, any.4, 1
+1, 0, 0, live.0, 0, 0, 0, live.1, 0, 1
+1, 0, live.0, 0, 0, 0, 0, 0, live.1, 1
+1, 0, 0, 0, 0, live.0, live.1, 0, 0, 1
+1, 0, 0, 0, live.0, 0, 0, 0, live.1, 1
+1, 0, 0, live.0, 0, 0, live.1, 0, 0, 1
+1, live.0, 0, 0, 0, 0, 0, live.1, 0, 1
+1, 0, 0, 0, live.0, 0, 0, live.1, live.2, 2
+1, 0, 0, live.0, 0, live.1, live.2, 0, 0, 2
+1, 0, 0, live.0, 0, 0, live.1, 0, live.2, 2
+1, 0, 0, live.0, 0, 0, live.1, live.2, 0, 2
+1, 0, 0, live.0, live.1, 0, live.2, 0, 0, 2
+1, any.0, any.1, any.2, any.3, any.4, any.5, any.6, any.7, 0
+# b3s2-i34q
+2, 0, 0, 0, live.0, 0, 0, live.1, 0, 2
+2, 0, 0, 0, live.0, 0, live.1, 0, 0, 2
+2, live.0, 0, 0, 0, 0, 0, live.1, 0, 2
+2, 0, live.0, 0, 0, 0, live.1, 0, 0, 2
+2, 0, 0, 0, 0, live.0, live.1, 0, 0, 2
+2, 0, 0, live.0, live.1, 0, live.2, 0, 0, 2
+2, live.0, live.1, live.2, 0, 0, 0, 0, 0, 2
+2, 0, live.0, 0, 0, live.1, 0, live.2, 0, 2
+2, live.0, 0, live.1, live.2, 0, 0, 0, 0, 2
+2, 0, 0, live.0, 0, live.1, 0, live.2, 0, 2
+2, 0, live.0, live.1, 0, 0, 0, live.2, 0, 2
+2, 0, 0, live.0, 0, 0, live.1, 0, live.2, 2
+2, 0, live.0, 0, live.1, 0, live.2, 0, 0, 2
+2, live.0, live.1, 0, 0, 0, 0, 0, live.2, 2
+2, live.0, 0, 0, live.1, 0, 0, 0, live.2, 2
+2, live.0, live.1, live.2, 0, 0, live.3, 0, 0, 2
+2, any.0, any.1, any.2, any.3, any.4, any.5, any.6, any.7, 0
+
+@COLORS
+1 255 0 0
+2 255 255 0
+3 0 0 255

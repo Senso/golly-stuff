@@ -1,0 +1,30 @@
+@RULE Fight
+********************************
+**** COMPILED FROM NUTSHELL ****
+****         v0.4.4         ****
+********************************
+
+0: empty
+1: fast breeder alive
+2: good attacker alive
+
+
+@TABLE
+neighborhood: Moore
+symmetries: permute
+n_states: 3
+
+var any.0 = {0,1,2}
+var any.1 = any.0
+var any.2 = any.0
+var any.3 = any.0
+var any.4 = any.0
+var any.5 = any.0
+var any.6 = any.0
+var any.7 = any.0
+
+#### symmetries: permute
+0, 1, 1, 1, 0, 0, 0, 0, 0, 1
+1, 1, 1, 0, 0, 0, 0, 0, 0, 1
+1, 1, 1, 1, 0, 0, 0, 0, 0, 1
+1, any.0, any.1, any.2, any.3, any.4, any.5, any.6, any.7, 0

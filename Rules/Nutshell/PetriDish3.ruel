@@ -1,0 +1,64 @@
+@NUTSHELL PetriDish3
+
+Food/cells with HPs
+
+0: Empty
+1: 1/2 hp 
+2: 1/2 food
+3: 2/2 hp
+4: 2/2 food
+5: dormant life
+#6: rotten food
+
+amoeba -> needs food to survive
+amoeba -> at full health, spawns a child
+amoeba -> health can rise if near food
+amoeba -> turns into food when dead
+food -> lowered by 1 if cell nearby takes food from it
+food -> if not consumed, becomes rotten/poisonous
+
+@TABLE
+
+states: 6
+neighborhood: Moore
+symmetries: permute
+
+food = (2, 4)
+life = (1, 3)
+nfood = (0, 1, 3, 5)
+nlife = (0, 2, 4, 5)
+
+# No food around, life degrades
+life, nfood ~ 8; [0: (4, 1)]
+
+# Food not consumed rots
+food, nlife ~ 8; 0
+
+# life near rotten food dies and becomes rotten
+##life, 6 ~ 1, any ~ 7; 6
+
+# Rotten food always dies next step
+##6, any ~ 8; 0
+
+# Food gets consumed
+food, life ~ 1, any ~ 7; [0: (0, 2)]
+
+# Dormant life becomes full life
+5, any ~ 8; 3
+
+## Full life near food spawns dormant lives to neighbors
+0, food, 3 ~ 4, any ~ 3; 5
+
+
+@COLORS
+
+# FFF: white
+# F00: red
+# 0F0: green
+# 00F: blue
+
+0F0: 4
+0B0: 2
+F00: 3
+B00: 1
+AAA: 5

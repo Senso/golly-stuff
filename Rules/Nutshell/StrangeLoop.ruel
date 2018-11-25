@@ -1,0 +1,60 @@
+@NUTSHELL StrangeLoop
+
+
+@TABLE
+
+neighborhood: Moore
+symmetries: permute
+
+# b3s23
+0, live ~ 3, any ~ 5; 1
+1, live ~ 2, 0 ~ 6; 1
+1, <3nyqjr / live / 0>; 2
+1, any ~ 8; 0
+
+# b3s2-i34q
+2, <2-i / live / 0>; 2
+2, live ~ 3, 0 ~ 5; 2
+2, <4q / live / 0>; 2
+2, any ~ 8; 0
+
+## b3s2-i34j
+#3, <2-i / live / 0>; 3
+#3, live ~ 3, 0 ~ 5; 3
+#3, <4j / live / 0>; 3
+#3, any ~ 8; 0
+
+## b2c13
+#0, <2c / live / 0>; 4
+#4, live ~ 1, 0 ~ 7; 4
+#4, live ~ 3, 0 ~ 5; 4
+#4, any ~ 8; 0
+
+
+# b3s12/C1
+#3, live ~ 1, 0 ~ 7; 3
+#3, live ~ 2, 0 ~ 6; 3
+#3, any ~ 8; 0
+
+# b38s23
+#0, <8 / live / 0>; 2
+#2, live ~ 2, 0 ~ 6; 2
+#2, <3cekainyqj / live / 0>; 2
+#2, <3r / live / 0>; 3
+#2, any ~ 8; 0
+
+## potentials?
+# b678s13478
+
+
+@COLORS
+
+# FFF: white
+# F00: red
+# 0F0: green
+# 00F: blue
+# FF0: yellow
+
+F00: 1
+FF0: 2
+00F: 3
